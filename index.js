@@ -14,7 +14,7 @@ const LRU = require('lru-cache');
 
 const cache = new LRU({
   max: process.env.CACHE_SIZE || Infinity,
-  maxAge: 1000 * 60, // 1 minute
+  maxAge: 1000 * 60 *60 *24, // 24 hours
   noDisposeOnSet: true,
   dispose: async (url, page) => {
     try {
@@ -27,7 +27,7 @@ const cache = new LRU({
     } catch (e){}
   }
 });
-setInterval(() => cache.prune(), 1000 * 60); // Prune every minute
+setInterval(() => cache.prune(), 1000 * 60 *60 *24); // Prune every 24 hour
 
 const blocked = require('./blocked.json');
 const blockedRegExp = new RegExp('(' + blocked.join('|') + ')', 'i');
@@ -88,7 +88,7 @@ async function handler(req, res) {
 
   let page, pageURL;
   try {
-    const { searchParams } = new URL(req.url, 'http://test.com');
+    const { searchParams } = new URL(req.url, 'http://ok.com');
     pageURL = searchParams.get('url');
 
     if (!/^https?:\/\//i.test(pageURL)) {
@@ -145,10 +145,10 @@ async function handler(req, res) {
         const resourceType = request.resourceType();
 
         // Skip data URIs
-        if (/^data:/i.test(url)){
-          request.continue();
-          return;
-        }
+     //   if (/^data:/i.test(url)){
+     //     request.continue();
+     //      return;
+     //   }
 
         const seconds = (+new Date() - nowTime) / 1000;
         const shortURL = truncate(url, 70);
