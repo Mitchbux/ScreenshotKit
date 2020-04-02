@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Puppetron</title>
+<title>ScreenshotKit</title>
 <link href="https://fonts.googleapis.com/css?family=Signika:400,700" rel="stylesheet">
 <style>
   html {
@@ -12,11 +12,12 @@
     margin: auto;
     width: 100%;
     padding: 0 .5em;
+    background-color:#202020
   }
   body, * {
     font-family: Signika, sans-serif;
     font-weight: 400;
-    color: #00667A;
+    color: #e0e0e0;
     text-align: center;
   }
   body, button, input {
@@ -25,7 +26,7 @@
   h1 {
     font-weight: 700;
     font-size: 60px;
-    text-shadow: 0 1px 20px #60E8EE;
+    text-shadow: 0 1px 20px #aaaaaa;
     margin: 0 0 .25em;
   }
   * {
@@ -42,7 +43,7 @@
     background-color: #D7FCFD;
   }
   input[type=url]:focus{
-    outline: 3px solid #00667A;
+    outline: 3px solid #303030;
   }
   button {
     border-radius: 0;
@@ -52,13 +53,13 @@
     width: 90%;
     max-width: 15ex;
     color: rgba(255,255,255,.75);
-    background-color: #00667A;
-    box-shadow: 0 1px 10px #60E8EE;
+    background-color: #303030;
+    box-shadow: 0 1px 10px #aaaaaa;
   }
   button:hover {
     color: rgba(255,255,255,1);
-    box-shadow: 0 1px 30px #60E8EE;
-    text-shadow: 0 0 5px #60E8EE;
+    box-shadow: 0 1px 30px #aaaaaa;
+    text-shadow: 0 0 5px #aaaaaa;
   }
   button:active {
     color: rgba(255,255,255,.55);
@@ -69,7 +70,7 @@
   }
 </style>
 <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAqFBMVEUAZnr///8ETk5gkJ0BYXFcfn4DWGD2+PgBY3X5+vq5xcVEgJABYnQCXWk8aGgCW2YDUlf8/f3w9PXq7/Dh6eva4+bf5OS6zNK6ys2iu8Odr6+LoaF9lpZKg5NkhIRQdXUCXmwKT0/n7e/X3+HR3eHX3t7K2Ny/0NXAy8uwxcu/ysqywMCbt7+Ztb2hsrKTp6h5k5MxdocabH8OZnlDbW0CX20qXV0SUlLsNjc3AAAAwElEQVQ4y83Rxw6CQBSF4fGI9GYX6fbey/u/mTAhYXMvKxP9VyfhS5jMiD/KWi2Gg1lP6w3XgUWBdquuu73SoE6LaVA3v9Ngegn3mlxnmwQdAKlRrpHPAO/pTORB3w4NFCGOcqY+Cw5yJmBBIOcLNgNu/XL1AYUG8ViuDchfjJaD6ipd+I03GQJqAzBOOaCzwNi5ABz6LaIocXMUeYJ7C5mqCw54WaZUX7mbLPoRsMYT0zQfBWBTUNQEbLVMF1/vA1j8CpImG+ecAAAAAElFTkSuQmCC">
-<h1>Puppetron</h1>
+<h1>ScreenshotKit</h1>
 <form id="formtron">
   <input type="url" name="url" required placeholder="Enter a URL">
   <br/>
@@ -77,7 +78,6 @@
   <button name="render">Render</button>
   <button name="pdf">PDF</button>
 </form>
-<footer><p>Very inspired by <a href="https://github.com/GoogleChrome/rendertron" target="_blank">Rendertron</a>. Documentation and project on <a href="https://github.com/cheeaun/puppetron" target="_blank">GitHub</a>.</p></footer>
 <script>
 function encode(url){
   return url.replace(/\?.*/i, function(m){
