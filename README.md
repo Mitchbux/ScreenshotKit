@@ -79,15 +79,9 @@ For Docker-based install:
 2. `docker run -p 8080:3000 puppet`
 3. Load `localhost:8080`
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/cheeaun/puppetron)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/Mitchbux/ScreenshotKit)
 
 Credits
 ---
 
-Block list from [Prerender](https://github.com/prerender/prerender/blob/master/lib/resources/blocked-resources.json).
-
-For version 1.0, this uses [`cheeaun/puppeteer`](https://hub.docker.com/r/cheeaun/puppeteer/) Docker image.
-
-For version 2.0, this uses some parts from [Zeit's now-examples: misc-screenshot](https://github.com/zeit/now-examples/blob/master/misc-screenshot/Dockerfile).
-
-Inspired by [`zenato/puppeteer`]((https://hub.docker.com/r/zenato/puppeteer/)), [`puppeteer-renderer`](https://github.com/zenato/puppeteer-renderer) and [Rendertron](https://render-tron.appspot.com/).
+Mitchbux
