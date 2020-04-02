@@ -1,24 +1,6 @@
-# <img src="assets/logo.png" width="400" alt="Puppetron">
+# <img src="assets/icon.png" width="400" alt="ico ">
 
-> [Puppeteer](https://github.com/GoogleChrome/puppeteer) (Headless Chrome Node API)-based rendering solution.
-
-Videos & Tweets:
-
-- Demo <https://www.youtube.com/watch?v=n4sRp3qe_1Y>
-- `clipSelector` demo <https://www.youtube.com/watch?v=wYCrJu-Wy2E>
-- CJK fonts support <https://twitter.com/cheeaun/status/902340897433501696>
-- Emoji support <https://twitter.com/cheeaun/status/903492052452728832>
-
-**⚠️⚠️⚠️ NOTE:** Starting version 2.0, CJK and emoji support is gone.
-
-🚧🚧🚧 PLEASE READ THIS 🚧🚧🚧
----
-
-**Do NOT use this for production use-cases.**
-
-This is just a demo site of what cool things that `Puppeteer` can do. Under any circumstances, this site may be down any time or be heavily rate-limited to prevent abuse.
-
-Please check out what [Puppeteer](https://github.com/GoogleChrome/puppeteer) can do for your own use case and host on your own servers.
+> [ScreenshotKit] (Headless Chrome Node API)-based rendering solution.
 
 API
 ---
