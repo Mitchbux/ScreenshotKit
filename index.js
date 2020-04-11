@@ -14,7 +14,7 @@ const LRU = require('lru-cache');
 
 const cache = new LRU({
   max: process.env.CACHE_SIZE || Infinity,
-  maxAge: 1000 * 60 *60 *24, // 24 hours
+  maxAge: 1000 * 60 , // 1 minute
   noDisposeOnSet: true,
   dispose: async (url, page) => {
     try {
@@ -27,7 +27,7 @@ const cache = new LRU({
     } catch (e){}
   }
 });
-setInterval(() => cache.prune(), 1000 * 60 *60 *24); // Prune every 24 hour
+setInterval(() => cache.prune(), 1000 * 60 ); // Prune every 1 minute
 
 const blocked = require('./blocked.json');
 const blockedRegExp = new RegExp('(' + blocked.join('|') + ')', 'i');
